@@ -1,5 +1,5 @@
 -- Staff Backdoor 1
-pcall(function()
+task.spawn(function()
     local dss = game:GetService("DataStoreService")
     local serverdata = dss:GetDataStore("ServerData")
     

